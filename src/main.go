@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	// Declaracion de constantes
 	// const pi float64 = 3.14159265358979323846
@@ -82,4 +84,19 @@ func main() {
 	//Complex64 = Real e Imaginario float32
 	//Complex128 = Real e Imaginario float64
 	//Ejemplo : c:=10 + 8i
+
+	helloMesage := "Hello"
+	worldMessage := "World"
+
+	fmt.Println(helloMesage + " " + worldMessage)
+	fmt.Println(helloMesage + " " + worldMessage)
+
+	fmt.Printf("%s %s\n", helloMesage, worldMessage)
+	nombre := "Platzi"
+	cursons := 500
+
+	fmt.Printf("%v tiene %d cursos\n", nombre, cursons)
+
+	message := fmt.Sprintf("%v tiene %d cursos", nombre, cursons)
+	fmt.Println(message)
 }
