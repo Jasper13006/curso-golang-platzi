@@ -1,16 +1,18 @@
 package main
 
 import (
-	"fmt"
+	"net/http"
 
-	mypackage "./mypackage"
+	"github.com/labstack/echo"
 )
 
 func main() {
-	var myCar mypackage.CarPublic
-	myCar.Brand = "Ford"
-	myCar.Year = 2018
 
-	// Print the car's brand and year
-	fmt.Println(myCar.Brand, myCar.Year)
+	e := echo.New()
+
+	// Routes
+	e.GET("/", func(c echo.Context) error {
+		return c.String(http.StatusOK, "Hello, World!")
+	})
+	e.Logger.Fatal(e.Start(":1323"))
 }
