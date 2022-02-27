@@ -2,27 +2,31 @@ package main
 
 import "fmt"
 
-func normalFuncion(message string) {
-	fmt.Println(message)
-}
-
-func tripeArgument(a, b int, c string) {
-	fmt.Println(a, b, c)
-}
-
-func returnValue(a int) int {
-	return a * 2
-}
-
-func doubleReturn(a int) (c, d int) {
-	return a, a * 2
-}
-
 func main() {
-	normalFuncion("Hello World")
-	tripeArgument(1, 2, "Hello")
-	fmt.Println(returnValue(3))
+	// for condicional
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
+	}
 
-	value1, value2 := doubleReturn(3)
-	fmt.Println(value1, value2)
+	// for while
+	counter := 0
+	for counter < 10 {
+		fmt.Println(counter)
+		counter++
+	}
+
+	// for range
+	for i, v := range "go" {
+		fmt.Println(i, v)
+	}
+
+	// for forever
+	counterForever := 0
+	for {
+		fmt.Println(counterForever)
+		counterForever++
+		if counterForever > 10 {
+			break
+		}
+	}
 }
